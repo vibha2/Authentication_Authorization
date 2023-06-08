@@ -76,7 +76,7 @@ exports.login = async(req,res) => {
         }
 
         //check for registered user
-        const user = await User.findOne({email});
+        let user = await User.findOne({email});
         //if not a registered user
         if(!user){
             return res.status(401).json({
@@ -102,8 +102,13 @@ exports.login = async(req,res) => {
                 {
                     expiresIn:"2h",
                 });
+        
+        user = user.toObject();
+        // console.log(user);
         user.token = token;
+        // console.log(user);
         user.password = undefined;
+        console.log(user);
         //from now date to 3 days
         const options = {
             expires: new Date( Date.now() + 3*24*60*60*1000),
@@ -137,3 +142,9 @@ exports.login = async(req,res) => {
         })
     }
 }
+
+// http://localhost:4000/api/v1/login
+// {
+//     "email": "vibhasahu@gmail.com",
+//     "password":"iamvibha",
+// }
