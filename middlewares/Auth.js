@@ -22,10 +22,12 @@ exports.auth = (req,res, next) => {
         //verify the token
         try{
             //user verify to decode the token
-            const decode = jwt.verify(token, process.env.JWT_SECRET);
-            console.log(decode);
-            //insert decode token to user
-            req.user = decode;
+            const payload = jwt.verify(token, process.env.JWT_SECRET);
+            console.log("payload: ",payload);
+            //insert payload token to user
+            // user = user.toObject();
+            req.user = payload;
+            console.log("req.user: ", req.user);
         }
         catch(error)
         {
@@ -51,7 +53,7 @@ exports.auth = (req,res, next) => {
 
 //now from auth, we have token in user object
 
-exports.isStudemt = (req, res, next) => {
+exports.isStudent = (req, res, next) => {
     try{
         console.log("req.user: ",req.user);
         if(req.user.role !== "Student"){

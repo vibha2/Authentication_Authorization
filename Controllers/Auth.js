@@ -148,3 +148,24 @@ exports.login = async(req,res) => {
 //     "email": "vibhasahu@gmail.com",
 //     "password":"iamvibha",
 // }
+
+//  http://localhost:4000/api/v1/test
+//get request
+// {
+//     "email": "vibhasahu@gmail.com",
+//     "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpYmhhc2FodUBnbWFpbC5jb20iLCJpZCI6IjY0N2EwNDI3NzUzZmIxYWZjNGZhMGZhNCIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTY4Njg2MTAyMiwiZXhwIjoxNjg2ODY4MjIyfQ.Xlts9aa3NG6vQapRzRA09zZHtcyU7MZQ1n-C9VGmM9s"
+// }
+
+//  http://localhost:4000/api/v1/student
+//get request
+// {
+   
+//     "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpYmhhc2FodUBnbWFpbC5jb20iLCJpZCI6IjY0N2EwNDI3NzUzZmIxYWZjNGZhMGZhNCIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTY4Njg2MTAyMiwiZXhwIjoxNjg2ODY4MjIyfQ.Xlts9aa3NG6vQapRzRA09zZHtcyU7MZQ1n-C9VGmM9s"
+// }
+
+//  http://localhost:4000/api/v1/admin
+//get request
+// {
+   
+//     "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpYmhhc2FodUBnbWFpbC5jb20iLCJpZCI6IjY0N2EwNDI3NzUzZmIxYWZjNGZhMGZhNCIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTY4Njg2MTAyMiwiZXhwIjoxNjg2ODY4MjIyfQ.Xlts9aa3NG6vQapRzRA09zZHtcyU7MZQ1n-C9VGmM9s"
+// }
