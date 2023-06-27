@@ -122,6 +122,14 @@ exports.login = async(req,res) => {
             message:'User Logged in successfully',
         });
 
+        // res.status(200).json({
+        //     success:true,
+        //     token,
+        //     user,
+        //     message:'User Logged in successfully',
+        // });
+
+
     }
         else{
             //password do not match
@@ -144,6 +152,7 @@ exports.login = async(req,res) => {
 }
 
 // http://localhost:4000/api/v1/login
+//post request
 // {
 //     "email": "vibhasahu@gmail.com",
 //     "password":"iamvibha",
