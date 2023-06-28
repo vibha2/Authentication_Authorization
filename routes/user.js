@@ -30,4 +30,16 @@ router.get("/admin", auth, isAdmin, (req,res) => {
     });
 });
 
+//in auth we sent payload to req, req.user = payload
+//find the payload value which is in auth
+router.get("/getEmail", auth, (req,res) => {
+    const id = req.user.id;
+    console.log("ID=> ",id);
+    res.json({
+        success:true,
+        id: id,
+        message:'Welcome to the Email Route',
+    });
+});
+
 module.exports = router;

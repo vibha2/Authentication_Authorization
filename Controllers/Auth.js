@@ -114,6 +114,9 @@ exports.login = async(req,res) => {
             expires: new Date( Date.now() + 3*24*60*60*1000),
             httpOnly:true,
         }
+        //we can expire cokie in 30000 also
+        //first login cookie will create at client side then run protected route
+        
 
         res.cookie("token",token, options).status(200).json({
             success:true,
